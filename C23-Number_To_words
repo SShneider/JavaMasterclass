@@ -1,0 +1,78 @@
+public class NumberToWords {
+    // write your code here
+      public static void numberToWords(int numIn){
+        
+        String outOut = "";
+        String outStr = "";
+        if(numIn<0) outOut = "Invalid Value";
+        int digitCount = getDigitCount(numIn);
+        while(digitCount>0){
+            int divisor = (int) Math.pow(10, digitCount-1);
+            int tempNum = numIn/divisor;
+            numIn-=tempNum*divisor;
+            switch(tempNum){
+                case 9: 
+                    outStr = "Nine";
+                    break;
+                 case 1: 
+                     outStr = "One";
+                    break;
+                 case 2: 
+                     outStr = "Two";
+                    break;
+                 case 3: 
+                     outStr = "Three";
+                    break;
+                 case 4: 
+                     outStr = "Four";
+                    break;
+                 case 5: 
+                     outStr = "Five";
+                    break;
+                 case 6: 
+                     outStr = "Six";
+                    break;
+                 case 7: 
+                     outStr = "Seven";
+                    break;
+                 case 8: 
+                     outStr = "Eight";
+                    break;
+                 default: 
+                     outStr = "Zero";
+                    break;
+                }
+            // System.out.println(outStr);
+            // System.out.println(divisor);
+            // System.out.println(tempNum);
+            // System.out.println(numIn);
+            outOut+=outStr;
+            if(digitCount!=1) outOut+=" ";
+            digitCount--;
+        }
+        System.out.println(outOut);
+    }
+   public static int reverse(int numIn){
+        int numAbs = Math.abs(numIn);
+        int intOut = 0;
+        while(numAbs>0){
+            intOut+=numAbs%10;
+            intOut*=10;
+            numAbs/=10;
+        }
+        if (numIn<0) intOut*=-1;
+        return intOut/10;
+    }
+    
+    public static int getDigitCount(int numIn){
+        if(numIn<0) return -1;
+        if (numIn==0) return 1;
+        int count = 0;
+        while(numIn>0){
+            count++;
+            numIn/=10;
+        }
+        
+        return count;
+    }
+}

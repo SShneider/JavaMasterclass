@@ -1,0 +1,12 @@
+public class GreatestCommonDivisor {
+    // write your code here
+    public static int getGreatestCommonDivisor(int nOne, int nTwo){
+        if(nOne<10 || nTwo<10) return -1;
+        int divisor = Math.max(nOne, nTwo)/2;
+        while(divisor>0){
+            if(nOne%divisor==0 && nTwo%divisor==0) return divisor;
+            divisor-=1;
+        }
+        return 1;
+    }
+}

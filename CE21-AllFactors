@@ -1,0 +1,14 @@
+public class FactorPrinter {
+    // write your code here
+    public static void printFactors(int numIn){
+        if(numIn<1) System.out.println("Invalid Value");
+        else{
+        int divisor = 1;
+        while(divisor<=numIn/2){
+            if(numIn%divisor==0) System.out.println(divisor);
+            divisor+=1;
+        }
+        System.out.println(numIn);
+        }
+    }
+}

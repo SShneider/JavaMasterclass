@@ -10,7 +10,12 @@ public class Main {
 //        System.out.println(deEq);
 //        System.out.println(deEq2);
 //        System.out.println(deEq3);
-        String secmin = SecondAndMinutes.getDurationString(555);
-        System.out.println(secmin);
+//        String secmin = SecondAndMinutes.getDurationString(555);
+//        System.out.println(secmin);
+        int[] myArr = {2, 1, 4, 5, 13, 55, 124, 14, 13};
+        int[] sortedArr = artSort.artSortAlg(myArr);
+        for(int i = 0; i<sortedArr.length; i++) {
+            System.out.println(sortedArr[i]);
+        }
     }
 }

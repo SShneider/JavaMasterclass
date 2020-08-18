@@ -1,0 +1,19 @@
+public class LargestPrime {
+    // write your code here
+    public static int getLargestPrime(int numIn){
+        if(numIn<2) return -1;
+        int start = numIn;
+        while(start>1){
+            if(numIn%start==0){
+                int newMid = start/2;
+                while(newMid>1){
+                    if(start%newMid==0) break;
+                    newMid--;
+                }
+                if(newMid==1) return start;
+            }
+            start--;
+        }
+        return -1;
+    }
+}

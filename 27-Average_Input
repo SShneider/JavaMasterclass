@@ -1,0 +1,23 @@
+import java.util.Scanner;
+ 
+public class InputCalculator {
+    // Write your code here
+    public static void inputThenPrintSumAndAverage(){
+        Scanner myScan = new Scanner(System.in);
+        int sum = 0;
+        int count = 0;
+        while(true){
+            boolean isInt = myScan.hasNextInt();
+            if(isInt){
+                count++;
+                sum+=myScan.nextInt();
+                myScan.nextLine();
+            }
+            else{
+                System.out.println("SUM = "+sum+" AVG = "+Math.round((float) sum/count));
+                break;
+            }
+        }
+    }
+    
+}

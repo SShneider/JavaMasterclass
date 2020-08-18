@@ -1,0 +1,20 @@
+public class FlourPacker {
+    // write your code here
+    public static boolean canPack(int big, int sm, int g2){
+        if(big<0 || sm<0 || g2<0) return false;
+        if((big*5+sm)<g2) return false;
+        while(g2>=5 && big>0){
+            g2-=5;
+            big--;
+            if(g2==0) return true;
+        }
+        while(g2>=1 && sm>0){
+            g2-=1;
+            sm--;
+            if(g2==0) return true;
+        }
+
+        if(g2==0) return true;
+        return false;
+    }
+}

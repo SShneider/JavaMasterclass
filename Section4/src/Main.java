@@ -18,7 +18,9 @@ public class Main {
 //            System.out.println(sortedArr[i]);
 //        }
 //    }
-        int[] arrNew = MinimumElement.readIntegers(10);
-        MinimumElement.findMin(arrNew);
+//        int[] arrNew = MinimumElement.readIntegers(10);
+//        MinimumElement.findMin(arrNew);
+        int[] arrNew = {1, 2, 3, 4, 5};
+        reverseArray.reverse(arrNew);
     }
 }

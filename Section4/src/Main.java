@@ -19,8 +19,10 @@ public class Main {
 //        }
 //    }
 //        int[] arrNew = MinimumElement.readIntegers(10);
-//        MinimumElement.findMin(arrNew);
-        int[] arrNew = {1, 2, 3, 4, 5};
-        reverseArray.reverse(arrNew);
+////        MinimumElement.findMin(arrNew);
+//        int[] arrNew = {1, 2, 3, 4, 5};
+//        reverseArray.reverse(arrNew);
+        MobilePhone myPhone = new MobilePhone("123456789");
+        myPhone.menu();
     }
 }

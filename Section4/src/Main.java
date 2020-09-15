@@ -22,7 +22,9 @@ public class Main {
 ////        MinimumElement.findMin(arrNew);
 //        int[] arrNew = {1, 2, 3, 4, 5};
 //        reverseArray.reverse(arrNew);
-        MobilePhone myPhone = new MobilePhone("123456789");
-        myPhone.menu();
+//        MobilePhone myPhone = new MobilePhone("123456789");
+//        myPhone.menu();
+        Bank myBank = new Bank();
+        myBank.menu();
     }
 }

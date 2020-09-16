@@ -17,7 +17,7 @@ public class Player {
         MyPlaylists.get(selectedIdx).listSongs();
     }
     public void addPlaylists(String name){
-        
+
     }
 
 }
